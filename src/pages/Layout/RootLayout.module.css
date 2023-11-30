@@ -1,10 +1,7 @@
 footer {
-	position: absolute;
-	left: 0;
-	bottom: 0;
 	width: 100%;
-	background-color: white;
-	color: black;
+	background-color: var(--body_background);
+	color: var(--body_color);
 	height: 5vh;
 	display: flex;
 	justify-content: center;
@@ -20,4 +17,3 @@ footer {
 	width: 35px;
 	height: 35px;
 }
-

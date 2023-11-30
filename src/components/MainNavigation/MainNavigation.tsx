@@ -3,23 +3,18 @@ import burger from '../assets/Burger-45.png';
 import NavBar from './NavBar';
 import { useContext } from 'react';
 import { context } from '../Context/card-contex-provider';
-import Backdrop from '../../UI/Backdrop';
-import { createPortal } from 'react-dom';
-const MainNavigation = (props: { amount: number }) => {
+import CartItems from '../Cart/CartItems';
+const MainNavigation = () => {
 	const ctx = useContext(context);
-	console.log(ctx.isVisible);
-
 	return (
 		<header className={classes.header}>
 			<nav>
 				<div className={classes.leftNav}>
 					<img src={burger}></img>
 				</div>
-				<NavBar amount={props.amount} />
+				<NavBar />
 			</nav>
-			{ctx.isVisible
-				? createPortal(<Backdrop />, document.getElementById('backdrop')!)
-				: null}
+			{ctx.isVisible ? <CartItems /> : null}
 		</header>
 	);
 };

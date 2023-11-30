@@ -1,0 +1,42 @@
+.list-items {
+	display: flex;
+	flex-direction: column;
+	padding: 3rem;
+	flex: 1;
+}
+span {
+	display: flex;
+	flex-direction: column;
+	padding: 2rem;
+	align-items: end;
+	font-size: 2rem;
+}
+span button {
+	width: 30%;
+	display: flex;
+	align-items: center;
+	padding: 1.5rem;
+	justify-content: center;
+	height: 3rem;
+	border-radius: 5rem;
+	border: none;
+	font-weight: bolder;
+	color: white;
+	background-color: #660000;
+	font-size: 15px;
+	transition: 0.3s ease-in-out;
+}
+span button.enabled:hover {
+	cursor: pointer;
+}
+span button.disabled {
+	opacity: 0.6;
+}
+.loading {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	font-weight: bolder;
+	font-size: 3rem;
+}

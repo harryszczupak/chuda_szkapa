@@ -1,0 +1,76 @@
+.item {
+	height: 50%;
+	width: 300px;
+	margin: 20px 0 0 20px;
+	border-radius: 15px;
+	transition: 0.6s;
+	box-shadow: 8px 8px 24px -12px rgba(0, 0, 0, 1);
+	background-color: transparent;
+	margin: 20px 0 0 20px;
+	position: relative;
+
+	transform: translateX(-1000px);
+}
+.item.active {
+	transform: translateX(0px);
+}
+.front {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	background-color: var(--item-bg);
+	border-radius: 15px;
+}
+
+.item h1 {
+	font-size: 40px;
+	color: var(--body_color);
+}
+.bot_desc {
+	width: 80%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 50%;
+}
+.bot_desc button {
+	font-size: 20px;
+	font-weight: bolder;
+	width: 40px;
+	height: 40px;
+	background-color: #660000;
+	border-radius: 40px;
+	border: none;
+	transition: 0.3s ease-in-out;
+	cursor: pointer;
+}
+.bot_desc span {
+	font-size: 30px;
+	font-weight: bold;
+	color: var(--body_color);
+}
+.bot_desc button:hover {
+	border: solid 7px #660000;
+	background-color: transparent;
+
+	clip-path: circle(40%);
+	transform: scale(1.5);
+}
+.front a {
+	width: 100%;
+	height: 300px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-color: transparent;
+}
+.front img {
+	width: 100%;
+	height: 200px;
+	border-radius: 15px 15px 0 0;
+	flex-grow: 0;
+	flex-shrink: 0;
+}

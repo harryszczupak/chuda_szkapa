@@ -1,7 +1,8 @@
 import ShopButton from './ShopButton';
 import { NavLink } from 'react-router-dom';
 import classes from './MainNavigation.module.css';
-const NavBar = (props: { amount: number }) => {
+
+const NavBar = () => {
 	return (
 		<div className={classes.rightNav}>
 			<ul>
@@ -26,7 +27,25 @@ const NavBar = (props: { amount: number }) => {
 					to='about'>
 					About
 				</NavLink>
-				<ShopButton amount={props.amount} />
+				<div className={classes.toggle}>
+					<input
+						id='dark-mode-toggle'
+						type='checkbox'
+						onChange={(e) => {
+							if (e.target.checked) {
+								document
+									.querySelector('body')!
+									.setAttribute('data-theme', 'dark');
+							} else {
+								document
+									.querySelector('body')!
+									.setAttribute('data-theme', 'light');
+							}
+						}}></input>
+					<label htmlFor='dark-mode-toggle'></label>
+				</div>
+
+				<ShopButton />
 			</ul>
 		</div>
 	);

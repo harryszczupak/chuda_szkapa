@@ -4,13 +4,28 @@
 	align-items: center;
 	width: 50%;
 	flex-direction: column;
+	transform: translateY(20%);
+	transition: 0.6s ease-in-out;
+	opacity: 0;
+}
+.datesHours.active {
+	transform: translateY(0%);
+	opacity: 1;
 }
 .datesInfo {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	padding: 0 0 0 0 ;
+	padding: 0 0 0 0;
 	width: 50%;
-	color:white;
+	color: white;
+}
+@media only screen and (max-width: 740px) {
+	.datesHours {
+		width: 100%;
+	}
+	.datesInfo {
+		width: 100%;
+	}
 }

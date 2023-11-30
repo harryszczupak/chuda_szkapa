@@ -66,7 +66,6 @@ const Slider = (props: { slide: string[] }) => {
 				style={{
 					display: 'flex',
 					position: 'absolute',
-					width: '15%',
 					justifyContent: 'space-between',
 				}}>
 				{props.slide.map((_, index) => {

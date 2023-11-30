@@ -1,14 +1,20 @@
 import classes from './Home.module.css';
 import Label from './label';
-import Carousel from './Carousel';
+import Carousel from './Slider/Carousel';
+import { useInView } from 'react-intersection-observer';
+
 const Home = () => {
+	const { ref, inView } = useInView({
+		triggerOnce: true,
+	});
+
 	return (
-		<section className={classes.HomeSection}>
-			<section>
+		<section ref={ref} className={classes.HomeSection}>
+			<section className={inView ? classes.active : ''}>
 				<h1>Witamy w Chudej Szkapie</h1>
 			</section>
 			<div className={classes.lableSection}>
-				<Label />
+				<Label isVisible={inView} />
 				<hr
 					style={{
 						width: '3px',
@@ -18,7 +24,7 @@ const Home = () => {
 						padding: '',
 						backgroundColor: 'white',
 					}}></hr>
-				<Carousel />
+				<Carousel isVisible={inView} />
 			</div>
 		</section>
 	);

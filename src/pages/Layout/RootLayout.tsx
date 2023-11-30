@@ -1,14 +1,14 @@
 import { Outlet } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import MainNavigation from '../components/home/MainNavigation';
+import MainNavigation from '../../components/MainNavigation/MainNavigation';
 import classes from './RootLayout.module.css';
-import gitHub from '../components/assets/github-mark.png';
-import ContextProvider from '../components/Context/card-contex-provider';
+import gitHub from '../../components/assets/github-mark.png';
+import ContextProvider from '../../components/Context/card-contex-provider';
 const RootLayout = () => {
 	return (
 		<ContextProvider>
-			<MainNavigation amount={1} />
-			<main style={{ backgroundColor: '#595959', height: '95vh' }}>
+			<MainNavigation />
+			<main style={{ backgroundColor: '#595959', flexGrow: '1' }}>
 				<Outlet />
 			</main>
 			<footer className={classes.footer}>

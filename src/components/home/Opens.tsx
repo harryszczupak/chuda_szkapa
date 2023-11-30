@@ -17,7 +17,7 @@ const Opens = () => {
 					{opensDay.map((day) => {
 						return (
 							<tr key={day}>
-								<td style={{ color: 'black', fontWeight: 'bolder' }}>{day}</td>
+								<td style={{ color: 'white', fontWeight: 'bolder' }}>{day}</td>
 							</tr>
 						);
 					})}

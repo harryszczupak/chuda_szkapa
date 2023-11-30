@@ -1,0 +1,29 @@
+.backdrop {
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-color: rgba(0, 0, 0, 0.9);
+	z-index: 1;
+}
+.modal {
+	min-width: 40%;
+	height: 100%;
+	background-color: white;
+	position: absolute;
+	right: 0%;
+	top: 0%;
+	z-index: 2;
+	animation: id 0.6s ease-in-out;
+	display: flex;
+	flex-direction: column;
+}
+@keyframes id {
+	from {
+		transform: translateX(100%);
+	}
+	to {
+		transform: translateX(0%);
+	}
+}

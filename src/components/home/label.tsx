@@ -1,8 +1,8 @@
 import classes from './Label.module.css';
 import Opens from './Opens';
-const Label = () => {
+const Label = ({ isVisible }: { isVisible: boolean }) => {
 	return (
-		<div className={classes.datesHours}>
+		<div className={`${classes.datesHours} ${isVisible ? classes.active : ''}`}>
 			<div className={classes.datesInfo}>
 				<h2
 					style={{
